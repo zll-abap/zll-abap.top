@@ -1,0 +1,44 @@
+/* 格子布局 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 四列平均分布 */
+    gap: 20px; /* 格子间距 */
+}
+
+/* 格子内部样式 */
+.grid-item {
+    padding: 20px;
+    text-align: center; /* 文字居中 */
+    border: 1px solid #ccc; /* 边框样式 */
+}
+
+/* 图片样式 */
+.grid-item img {
+    max-width: 100%; /* 图片最大宽度为格子的宽度 */
+    height: auto; /* 图片高度自适应 */
+    display: block; /* 去除图片默认的下边距 */
+    margin: 0 auto; /* 图片水平居中 */
+}
+/* 设置表格整体样式 */
+table {
+    width: 100%; /* 表格宽度100% */
+    border-collapse: collapse; /* 边框合并 */
+    border: 1px solid #ccc; /* 边框颜色和粗细 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    font-size: 16px; /* 设置字体大小 */
+    line-height: 1.6; /* 设置行高 */
+}
+
+/* 设置表头样式 */
+th {
+    background-color: #f2f2f2; /* 表头背景色 */
+    padding: 8px; /* 内边距 */
+    text-align: left; /* 文字左对齐 */
+    border: 1px solid #ccc; /* 边框 */
+}
+
+/* 设置表格单元格样式 */
+td {
+    padding: 8px; /* 内边距 */
+    border: 1px solid #ccc; /* 边框 */
+}
