@@ -4424,7 +4424,12 @@
 		border-bottom:none; 
 	}
 	.post_page_title_img a > h2{
-		font-size: 3rem;
+		font-size: 2rem;
+		color: #fff;
+		
+	}
+	.post_page_title_img a > h3{
+		font-size: 1rem;
 		color: #fff;
 		
 	}
