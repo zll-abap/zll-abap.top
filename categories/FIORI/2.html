@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    This is zhanglulu
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="zll-abap" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">zll-abap</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+				<ul class="submenu">
+					
+					<li>
+						<!-- <a href="/ABAP">ABAP</a> -->
+						<a href="/categories/ABAP">ABAP</a>
+						
+					</li>
+					
+					<li>
+						<!-- <a href="/ODATA">ODATA</a> -->
+						<a href="/categories/ODATA">ODATA</a>
+						
+					</li>
+					
+					<li>
+						<!-- <a href="/FIORI">FIORI</a> -->
+						<a href="/categories/FIORI">FIORI</a>
+						
+					</li>
+					
+				</ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        <!--  -->
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 8rem;background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <h2 style="padding: 0rem 1rem 1rem 1rem ;">SAP Fiori创建目录(Catalogs)和组(Groups)</h2>
+                <h3 style="padding: 0rem 0rem 0rem 80% ;">
+                  2024-08-30</h3>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 1rem;">
+                <h3 id="1-目录-Catalogs-和组-Groups-概念"><a href="#1-目录-Catalogs-和组-Groups-概念" class="headerlink" title="1.目录(Catalogs)和组(Groups)概念"></a>1.目录(Catalogs)和组(Groups)概念</h3><h6 id="Catalogs（目录）："><a href="#Catalogs（目录）：" class="headerlink" title="Catalogs（目录）："></a>Catalogs（目录）：</h6><h6 id="目录是-Fiori-Launchpad-上的一个容器，用于组织和展示应用程序集合。"><a href="#目录是-Fiori-Launchpad-上的一个容器，用于组织和展示应用程序集合。" class="headerlink" title="目录是 Fiori Launchpad 上的一个容器，用于组织和展示应用程序集合。"></a>目录是 Fiori Launchpad 上的一个容器，用于组织和展示应用程序集合。</h6><h6 id="目录可以包含一组相关的应用程序，通常根据业务功能或用户角色进行组织。"><a href="#目录可以包含一组相关的应用程序，通常根据业务功能或用户角色进行组织。" class="headerlink" title="目录可以包含一组相关的应用程序，通常根据业务功能或用户角色进行组织。"></a>目录可以包含一组相关的应用程序，通常根据业务功能或用户角色进行组织。</h6><h6 id="目录通常对应于特定的业务场景或功能领域，例如销售、采购、财务等。"><a href="#目录通常对应于特定的业务场景或功能领域，例如销售、采购、财务等。" class="headerlink" title="目录通常对应于特定的业务场景或功能领域，例如销售、采购、财务等。"></a>目录通常对应于特定的业务场景或功能领域，例如销售、采购、财务等。</h6><h6 id="目录是-Fiori-Launchpad-的一部分，用户可以通过-Launchpad-访问其中的应用程序。"><a href="#目录是-Fiori-Launchpad-的一部分，用户可以通过-Launchpad-访问其中的应用程序。" class="headerlink" title="目录是 Fiori Launchpad 的一部分，用户可以通过 Launchpad 访问其中的应用程序。"></a>目录是 Fiori Launchpad 的一部分，用户可以通过 Launchpad 访问其中的应用程序。</h6><h6 id="Groups（组）："><a href="#Groups（组）：" class="headerlink" title="Groups（组）："></a>Groups（组）：</h6><h6 id="组是-Fiori-Launchpad-上目录内的子容器，用于进一步组织和分类应用程序。"><a href="#组是-Fiori-Launchpad-上目录内的子容器，用于进一步组织和分类应用程序。" class="headerlink" title="组是 Fiori Launchpad 上目录内的子容器，用于进一步组织和分类应用程序。"></a>组是 Fiori Launchpad 上目录内的子容器，用于进一步组织和分类应用程序。</h6><h6 id="组可以用来对应不同的任务、工作流程或用户偏好，以便更好地组织和展示应用程序。"><a href="#组可以用来对应不同的任务、工作流程或用户偏好，以便更好地组织和展示应用程序。" class="headerlink" title="组可以用来对应不同的任务、工作流程或用户偏好，以便更好地组织和展示应用程序。"></a>组可以用来对应不同的任务、工作流程或用户偏好，以便更好地组织和展示应用程序。</h6><h6 id="用户可以根据自己的需求自定义组的排列顺序，并且通常可以将经常使用的应用程序添加到组中以便快速访问。"><a href="#用户可以根据自己的需求自定义组的排列顺序，并且通常可以将经常使用的应用程序添加到组中以便快速访问。" class="headerlink" title="用户可以根据自己的需求自定义组的排列顺序，并且通常可以将经常使用的应用程序添加到组中以便快速访问。"></a>用户可以根据自己的需求自定义组的排列顺序，并且通常可以将经常使用的应用程序添加到组中以便快速访问。</h6><h6 id="用户可以根据自己的角色或任务需求自定义组的显示方式，以便更有效地使用应用程序。"><a href="#用户可以根据自己的角色或任务需求自定义组的显示方式，以便更有效地使用应用程序。" class="headerlink" title="用户可以根据自己的角色或任务需求自定义组的显示方式，以便更有效地使用应用程序。"></a>用户可以根据自己的角色或任务需求自定义组的显示方式，以便更有效地使用应用程序。</h6><h6 id="因此，目录和组都是-Fiori-Launchpad-中用于组织和管理应用程序的方式，但目录是更高级的容器，用于组织一组相关的应用程序集合，而组则是目录内的子容器，用于进一步组织和分类应用程序。"><a href="#因此，目录和组都是-Fiori-Launchpad-中用于组织和管理应用程序的方式，但目录是更高级的容器，用于组织一组相关的应用程序集合，而组则是目录内的子容器，用于进一步组织和分类应用程序。" class="headerlink" title="因此，目录和组都是 Fiori Launchpad 中用于组织和管理应用程序的方式，但目录是更高级的容器，用于组织一组相关的应用程序集合，而组则是目录内的子容器，用于进一步组织和分类应用程序。"></a>因此，目录和组都是 Fiori Launchpad 中用于组织和管理应用程序的方式，但目录是更高级的容器，用于组织一组相关的应用程序集合，而组则是目录内的子容器，用于进一步组织和分类应用程序。</h6><h6 id="可以理解为一个是全集-一个是子集。比如catalogs里有A-B-C-groups可以是AB-AC-ABC等。groups可以控制APP的显示顺序。"><a href="#可以理解为一个是全集-一个是子集。比如catalogs里有A-B-C-groups可以是AB-AC-ABC等。groups可以控制APP的显示顺序。" class="headerlink" title="可以理解为一个是全集 一个是子集。比如catalogs里有A,B,C. groups可以是AB,AC,ABC等。groups可以控制APP的显示顺序。"></a>可以理解为一个是全集 一个是子集。比如catalogs里有A,B,C. groups可以是AB,AC,ABC等。groups可以控制APP的显示顺序。</h6><h3 id="2-启动Lauchpad-Designer。Tcode-N-UI2-FLPD-CONF"><a href="#2-启动Lauchpad-Designer。Tcode-N-UI2-FLPD-CONF" class="headerlink" title="2.启动Lauchpad Designer。Tcode: &#x2F;N&#x2F;UI2&#x2F;FLPD_CONF"></a>2.启动Lauchpad Designer。Tcode: &#x2F;N&#x2F;UI2&#x2F;FLPD_CONF</h3><h6 id="对于Catalogs（目录）Groups（组）应该用Tcode：-N-UI2-FLPD-CONF-cross-client去启动，而非-N-UI2-FLPD-CUST-client-specific-。"><a href="#对于Catalogs（目录）Groups（组）应该用Tcode：-N-UI2-FLPD-CONF-cross-client去启动，而非-N-UI2-FLPD-CUST-client-specific-。" class="headerlink" title="对于Catalogs（目录）Groups（组）应该用Tcode：&#x2F;N&#x2F;UI2&#x2F;FLPD_CONF cross-client去启动，而非&#x2F;N&#x2F;UI2&#x2F;FLPD_CUST  client-specific 。"></a>对于Catalogs（目录）Groups（组）应该用Tcode：&#x2F;N&#x2F;UI2&#x2F;FLPD_CONF cross-client去启动，而非&#x2F;N&#x2F;UI2&#x2F;FLPD_CUST  client-specific 。</h6><h6 id="但是因为我这是测试用所以此时用的是-N-UI2-FLPD-CUST"><a href="#但是因为我这是测试用所以此时用的是-N-UI2-FLPD-CUST" class="headerlink" title="但是因为我这是测试用所以此时用的是&#x2F;N&#x2F;UI2&#x2F;FLPD_CUST"></a>但是因为我这是测试用所以此时用的是&#x2F;N&#x2F;UI2&#x2F;FLPD_CUST</h6><h6 id="GUI中输入-N-UI2-FLPD-CUST会跳到下面的页面。输入用户名和密码（和GUI中一致）。"><a href="#GUI中输入-N-UI2-FLPD-CUST会跳到下面的页面。输入用户名和密码（和GUI中一致）。" class="headerlink" title="GUI中输入&#x2F;N&#x2F;UI2&#x2F;FLPD_CUST会跳到下面的页面。输入用户名和密码（和GUI中一致）。"></a>GUI中输入&#x2F;N&#x2F;UI2&#x2F;FLPD_CUST会跳到下面的页面。输入用户名和密码（和GUI中一致）。</h6><p><img src="/./images/Fiori/2_1.png" alt="2_1"></p>
+<h3 id="3-创建Catalogs（目录）："><a href="#3-创建Catalogs（目录）：" class="headerlink" title="3.创建Catalogs（目录）："></a>3.创建Catalogs（目录）：</h3><p><img src="/./images/Fiori/2_2.png" alt="2_2"></p>
+<h6 id="※如果是cross-clint的话，①的位置会是-clint-all"><a href="#※如果是cross-clint的话，①的位置会是-clint-all" class="headerlink" title="※如果是cross-clint的话，①的位置会是 clint:all."></a>※如果是cross-clint的话，①的位置会是 clint:all.</h6><h6 id="点击②的’➕’-创建Catalogs"><a href="#点击②的’➕’-创建Catalogs" class="headerlink" title="点击②的’➕’.创建Catalogs"></a>点击②的’➕’.创建Catalogs</h6><h6 id="※如果是cross-clint的话，会被强制要求填写请求号和package，填写的位置在上方①的小车轮处。"><a href="#※如果是cross-clint的话，会被强制要求填写请求号和package，填写的位置在上方①的小车轮处。" class="headerlink" title="※如果是cross-clint的话，会被强制要求填写请求号和package，填写的位置在上方①的小车轮处。"></a>※如果是cross-clint的话，会被强制要求填写请求号和package，填写的位置在上方①的小车轮处。</h6><p><img src="/./images/Fiori/2_3.png" alt="2_3"></p>
+<h3 id="4-创建Groups（组）："><a href="#4-创建Groups（组）：" class="headerlink" title="4.创建Groups（组）："></a>4.创建Groups（组）：</h3><p><img src="/./images/Fiori/2_4.png" alt="2_4"></p>
+<h6 id="点击①的位置，切换到Group界面"><a href="#点击①的位置，切换到Group界面" class="headerlink" title="点击①的位置，切换到Group界面"></a>点击①的位置，切换到Group界面</h6><h6 id="点击②’➕’-创建Group。"><a href="#点击②’➕’-创建Group。" class="headerlink" title="点击②’➕’,创建Group。"></a>点击②’➕’,创建Group。</h6><p><img src="/./images/Fiori/2_5.png" alt="2_5"></p>
+<h6 id="①选中-Enable-users-to-personalize-their-group-指的是允许用户自己去维护Group里面内容。"><a href="#①选中-Enable-users-to-personalize-their-group-指的是允许用户自己去维护Group里面内容。" class="headerlink" title="①选中(Enable users to personalize their group)指的是允许用户自己去维护Group里面内容。"></a>①选中(Enable users to personalize their group)指的是允许用户自己去维护Group里面内容。</h6><h6 id="现在目录-Catalogs-和组-Groups-就创建好了。"><a href="#现在目录-Catalogs-和组-Groups-就创建好了。" class="headerlink" title="现在目录(Catalogs)和组(Groups)就创建好了。"></a>现在目录(Catalogs)和组(Groups)就创建好了。</h6>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<!-- <div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div> -->
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/categories/FIORI/2.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/categories/FIORI/2.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

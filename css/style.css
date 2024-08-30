@@ -24,8 +24,8 @@ table {
     width: 100%; /* 表格宽度100% */
     border-collapse: collapse; /* 边框合并 */
     border: 1px solid #ccc; /* 边框颜色和粗细 */
-    font-family: Arial, sans-serif; /* 设置字体 */
-    font-size: 16px; /* 设置字体大小 */
+    font-family: Microsoft YaHei; /* 设置字体 */
+    font-size: 20px; /* 设置字体大小 */
     line-height: 1.6; /* 设置行高 */
 }
 
@@ -42,4 +42,8 @@ td {
     padding: 8px; /* 内边距 */
     border: 1px solid #ccc; /* 边框 */
 }
-
+.custom-code-block {
+    width: 100%; /* 设定你想要的宽度 */
+    margin: 0 auto; /* 使代码块居中 */
+    overflow: auto; /* 防止内容溢出 */
+}

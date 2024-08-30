@@ -146,13 +146,17 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 8rem;background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <h2 style="padding: 0rem 1rem 1rem 1rem ;">关于自建网站的目的</h2>
+                <h2 style="padding: 0rem 1rem 1rem 1rem ;">SAP Fiori实现4:VSCode测试Fiori时 如何绑定测试数据的客户端？sap-client=400</h2>
                 <h3 style="padding: 0rem 0rem 0rem 80% ;">
-                  2024-08-27</h3>
+                  2024-08-30</h3>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 1rem;">
-                <h3 id="原因1："><a href="#原因1：" class="headerlink" title="原因1："></a>原因1：</h3><h4 id="不止局限于某个博客平台去创作，多方学习。"><a href="#不止局限于某个博客平台去创作，多方学习。" class="headerlink" title="不止局限于某个博客平台去创作，多方学习。"></a>不止局限于某个博客平台去创作，多方学习。</h4><h3 id="原因2："><a href="#原因2：" class="headerlink" title="原因2："></a>原因2：</h3><h4 id="之前在CSDN创作，但是局限性比较大。受制于人。"><a href="#之前在CSDN创作，但是局限性比较大。受制于人。" class="headerlink" title="之前在CSDN创作，但是局限性比较大。受制于人。"></a>之前在CSDN创作，但是局限性比较大。受制于人。</h4><h3 id="原因3："><a href="#原因3：" class="headerlink" title="原因3："></a>原因3：</h3><h4 id="分享自己的知识，供同学们参考。"><a href="#分享自己的知识，供同学们参考。" class="headerlink" title="分享自己的知识，供同学们参考。"></a>分享自己的知识，供同学们参考。</h4>
+                <link rel="stylesheet" href="/css/style.css">
+
+<h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><h6 id="本地测试FIori工程-Odata数据交互特定客户端设置。"><a href="#本地测试FIori工程-Odata数据交互特定客户端设置。" class="headerlink" title="本地测试FIori工程,Odata数据交互特定客户端设置。"></a>本地测试FIori工程,Odata数据交互特定客户端设置。</h6><h6 id="VSCode执行-npm-start-会跳转至测试界面"><a href="#VSCode执行-npm-start-会跳转至测试界面" class="headerlink" title="VSCode执行 npm start 会跳转至测试界面"></a>VSCode执行 npm start 会跳转至测试界面</h6><p><img src="/./images/Fiori/7_1.png" alt="7_1"></p>
+<h6 id="跳转的URL中是不带-sap-clint的，如果开发环境是DEV200，测试环境是DEV400，那么会默认进入DEV200中。"><a href="#跳转的URL中是不带-sap-clint的，如果开发环境是DEV200，测试环境是DEV400，那么会默认进入DEV200中。" class="headerlink" title="跳转的URL中是不带 sap-clint的，如果开发环境是DEV200，测试环境是DEV400，那么会默认进入DEV200中。"></a>跳转的URL中是不带 sap-clint的，如果开发环境是DEV200，测试环境是DEV400，那么会默认进入DEV200中。</h6><h6 id="你有2种方法改变Odata服务进入的环境。"><a href="#你有2种方法改变Odata服务进入的环境。" class="headerlink" title="你有2种方法改变Odata服务进入的环境。"></a>你有2种方法改变Odata服务进入的环境。</h6><h6 id="1-比较麻烦，需要退掉所有客户端。-GUI中（测试环境DEV400）输入，“-N-UI2-FLP”-进入lauchpad。会自动跳转至测试环境的lauchpad，登录账号和密码。-然后VSCode执行-“npm-start”，跳转的界面虽然URL没有改变，但是可以进入到测试环境了。"><a href="#1-比较麻烦，需要退掉所有客户端。-GUI中（测试环境DEV400）输入，“-N-UI2-FLP”-进入lauchpad。会自动跳转至测试环境的lauchpad，登录账号和密码。-然后VSCode执行-“npm-start”，跳转的界面虽然URL没有改变，但是可以进入到测试环境了。" class="headerlink" title="1.比较麻烦，需要退掉所有客户端。 GUI中（测试环境DEV400）输入，“&#x2F;N&#x2F;UI2&#x2F;FLP”  进入lauchpad。会自动跳转至测试环境的lauchpad，登录账号和密码。 然后VSCode执行 “npm start”，跳转的界面虽然URL没有改变，但是可以进入到测试环境了。"></a>1.比较麻烦，需要退掉所有客户端。 GUI中（测试环境DEV400）输入，“&#x2F;N&#x2F;UI2&#x2F;FLP”  进入lauchpad。会自动跳转至测试环境的lauchpad，登录账号和密码。 然后VSCode执行 “npm start”，跳转的界面虽然URL没有改变，但是可以进入到测试环境了。</h6><h6 id="2-URL中添加“sap-client-400”，如下方所示。这样也可以直接进入测试环境。"><a href="#2-URL中添加“sap-client-400”，如下方所示。这样也可以直接进入测试环境。" class="headerlink" title="2.URL中添加“sap-client&#x3D;400”，如下方所示。这样也可以直接进入测试环境。"></a>2.URL中添加“sap-client&#x3D;400”，如下方所示。这样也可以直接进入测试环境。</h6><p><img src="/./images/Fiori/7_2.png" alt="7_2"></p>
+
             </div>
 
             <!-- Post Comments -->
@@ -214,8 +218,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2024/08/27/first/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://example.com/2024/08/27/first/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://example.com/categories/FIORI/7.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/categories/FIORI/7.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

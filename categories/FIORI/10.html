@@ -146,13 +146,26 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 8rem;background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <h2 style="padding: 0rem 1rem 1rem 1rem ;">关于自建网站的目的</h2>
+                <h2 style="padding: 0rem 1rem 1rem 1rem ;">SAP Fiori实现7：关于翻译 sap-language=JA  Tcode:SLXT</h2>
                 <h3 style="padding: 0rem 0rem 0rem 80% ;">
-                  2024-08-27</h3>
+                  2024-08-30</h3>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 1rem;">
-                <h3 id="原因1："><a href="#原因1：" class="headerlink" title="原因1："></a>原因1：</h3><h4 id="不止局限于某个博客平台去创作，多方学习。"><a href="#不止局限于某个博客平台去创作，多方学习。" class="headerlink" title="不止局限于某个博客平台去创作，多方学习。"></a>不止局限于某个博客平台去创作，多方学习。</h4><h3 id="原因2："><a href="#原因2：" class="headerlink" title="原因2："></a>原因2：</h3><h4 id="之前在CSDN创作，但是局限性比较大。受制于人。"><a href="#之前在CSDN创作，但是局限性比较大。受制于人。" class="headerlink" title="之前在CSDN创作，但是局限性比较大。受制于人。"></a>之前在CSDN创作，但是局限性比较大。受制于人。</h4><h3 id="原因3："><a href="#原因3：" class="headerlink" title="原因3："></a>原因3：</h3><h4 id="分享自己的知识，供同学们参考。"><a href="#分享自己的知识，供同学们参考。" class="headerlink" title="分享自己的知识，供同学们参考。"></a>分享自己的知识，供同学们参考。</h4>
+                <link rel="stylesheet" href="/css/style.css">
+
+<h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><h6 id="对Fiori界面进行翻译"><a href="#对Fiori界面进行翻译" class="headerlink" title="对Fiori界面进行翻译"></a>对Fiori界面进行翻译</h6><h6 id="在进入Fiori画面时，选择不同的登陆语言可以显示-对应的语言界面。"><a href="#在进入Fiori画面时，选择不同的登陆语言可以显示-对应的语言界面。" class="headerlink" title="在进入Fiori画面时，选择不同的登陆语言可以显示 对应的语言界面。"></a>在进入Fiori画面时，选择不同的登陆语言可以显示 对应的语言界面。</h6><h6 id="语言翻译一方面受i18n控制，另一方面也受字段在GUI端是否做了翻译有影响。"><a href="#语言翻译一方面受i18n控制，另一方面也受字段在GUI端是否做了翻译有影响。" class="headerlink" title="语言翻译一方面受i18n控制，另一方面也受字段在GUI端是否做了翻译有影响。"></a>语言翻译一方面受i18n控制，另一方面也受字段在GUI端是否做了翻译有影响。</h6><h3 id="1-测试的时候-可以在URL中加入-sap-language-XX-来控制登录语言。"><a href="#1-测试的时候-可以在URL中加入-sap-language-XX-来控制登录语言。" class="headerlink" title="1.测试的时候,可以在URL中加入 sap-language&#x3D;XX 来控制登录语言。"></a>1.测试的时候,可以在URL中加入 sap-language&#x3D;XX 来控制登录语言。</h3><p><img src="/./images/Fiori/10_1.png" alt="10_1"></p>
+<h3 id="2-i18n控制控制语言"><a href="#2-i18n控制控制语言" class="headerlink" title="2.i18n控制控制语言"></a>2.i18n控制控制语言</h3><h6 id="Fiori运行会根据URL的语言自动寻找i18n文件，默认的为i18n-properties。"><a href="#Fiori运行会根据URL的语言自动寻找i18n文件，默认的为i18n-properties。" class="headerlink" title="Fiori运行会根据URL的语言自动寻找i18n文件，默认的为i18n.properties。"></a>Fiori运行会根据URL的语言自动寻找i18n文件，默认的为i18n.properties。</h6><h6 id="URL中写了日语，则为i18n-ja-properties。"><a href="#URL中写了日语，则为i18n-ja-properties。" class="headerlink" title="URL中写了日语，则为i18n_ja.properties。"></a>URL中写了日语，则为i18n_ja.properties。</h6><p><img src="/./images/Fiori/10_2.png" alt="10_2"></p>
+<h6 id="i18n-properties标题："><a href="#i18n-properties标题：" class="headerlink" title="i18n.properties标题："></a>i18n.properties标题：</h6><ul>
+<li><h6 id="appTitle-Register-Quality-Inspection"><a href="#appTitle-Register-Quality-Inspection" class="headerlink" title="appTitle&#x3D;Register Quality Inspection"></a>appTitle&#x3D;Register Quality Inspection</h6></li>
+</ul>
+<h6 id="i18n-ja-properties标题："><a href="#i18n-ja-properties标题：" class="headerlink" title="i18n_ja.properties标题："></a>i18n_ja.properties标题：</h6><ul>
+<li><h6 id="appTitle-品質検査登録"><a href="#appTitle-品質検査登録" class="headerlink" title="appTitle&#x3D;品質検査登録"></a>appTitle&#x3D;品質検査登録</h6></li>
+</ul>
+<h6 id="实际效果对比："><a href="#实际效果对比：" class="headerlink" title="实际效果对比："></a>实际效果对比：</h6><p><img src="/./images/Fiori/10_3.png" alt="10_3"></p>
+<h3 id="3-Odata引入的字段受GUI方面控制，通过SE63做翻译"><a href="#3-Odata引入的字段受GUI方面控制，通过SE63做翻译" class="headerlink" title="3.Odata引入的字段受GUI方面控制，通过SE63做翻译"></a>3.Odata引入的字段受GUI方面控制，通过SE63做翻译</h3><h6 id="如上记SmartTable引入的数据来源为CDSView：ZCDS-MM-QI-LIST"><a href="#如上记SmartTable引入的数据来源为CDSView：ZCDS-MM-QI-LIST" class="headerlink" title="如上记SmartTable引入的数据来源为CDSView：ZCDS_MM_QI_LIST"></a>如上记SmartTable引入的数据来源为CDSView：ZCDS_MM_QI_LIST</h6><h6 id="Tcode：SE63"><a href="#Tcode：SE63" class="headerlink" title="Tcode：SE63"></a>Tcode：SE63</h6><h6 id="逐次选择："><a href="#逐次选择：" class="headerlink" title="逐次选择："></a>逐次选择：</h6><p><img src="/./images/Fiori/10_4.png" alt="10_4"><br><img src="/./images/Fiori/10_5.png" alt="10_5"></p>
+<h6 id="①-当前语言"><a href="#①-当前语言" class="headerlink" title="①.当前语言"></a>①.当前语言</h6><h6 id="②-目标语言"><a href="#②-目标语言" class="headerlink" title="②.目标语言"></a>②.目标语言</h6><p><img src="/./images/Fiori/10_6.png" alt="10_6"><br><img src="/./images/Fiori/10_7.png" alt="10_7"></p>
+<h6 id="此处已自动改变。"><a href="#此处已自动改变。" class="headerlink" title="此处已自动改变。"></a>此处已自动改变。</h6><h6 id="对于此处翻译是不产生请求的。所以翻译的移送需要单独做："><a href="#对于此处翻译是不产生请求的。所以翻译的移送需要单独做：" class="headerlink" title="对于此处翻译是不产生请求的。所以翻译的移送需要单独做："></a>对于此处翻译是不产生请求的。所以翻译的移送需要单独做：</h6><h6 id="Tcode：SLXT"><a href="#Tcode：SLXT" class="headerlink" title="Tcode：SLXT"></a>Tcode：SLXT</h6>
             </div>
 
             <!-- Post Comments -->
@@ -214,8 +227,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2024/08/27/first/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://example.com/2024/08/27/first/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://example.com/categories/FIORI/10.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/categories/FIORI/10.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

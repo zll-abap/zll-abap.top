@@ -427,7 +427,7 @@
 		font-weight: 900;
 		line-height: 1.5;
 		letter-spacing: 0.075em;
-		text-transform: uppercase;
+		/* text-transform: uppercase; */
 		margin: 0 0 1rem 0;
 	}
 
@@ -4418,19 +4418,15 @@
 	.post-content img{
 		max-width:100%; 
 	}
-	.post_page_title_img a{
-		position:absolute;
-		text-shadow:6px 5px 10px #000;
-		border-bottom:none; 
-	}
-	.post_page_title_img a > h2{
+
+	.post_page_title_img  h2{
 		font-size: 2rem;
-		color: #fff;
+		color: black;
 		
 	}
-	.post_page_title_img a > h3{
+	.post_page_title_img h3{
 		font-size: 1rem;
-		color: #fff;
+		color: black;
 		
 	}
 

@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    This is zhanglulu
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="zll-abap" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">zll-abap</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+				<ul class="submenu">
+					
+					<li>
+						<!-- <a href="/ABAP">ABAP</a> -->
+						<a href="/categories/ABAP">ABAP</a>
+						
+					</li>
+					
+					<li>
+						<!-- <a href="/ODATA">ODATA</a> -->
+						<a href="/categories/ODATA">ODATA</a>
+						
+					</li>
+					
+					<li>
+						<!-- <a href="/FIORI">FIORI</a> -->
+						<a href="/categories/FIORI">FIORI</a>
+						
+					</li>
+					
+				</ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        <!--  -->
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 8rem;background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <h2 style="padding: 0rem 1rem 1rem 1rem ;">SAP Fiori实现1:扫描二维码并放置在文本框中</h2>
+                <h3 style="padding: 0rem 0rem 0rem 80% ;">
+                  2024-08-30</h3>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 1rem;">
+                <link rel="stylesheet" href="/css/style.css">
+
+<h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><h6 id="页面上显示文本框，点击文本框会打开摄像头扫描二维码，之后将二维码文本写进文本框中-获取二维码后10位文字-。"><a href="#页面上显示文本框，点击文本框会打开摄像头扫描二维码，之后将二维码文本写进文本框中-获取二维码后10位文字-。" class="headerlink" title="页面上显示文本框，点击文本框会打开摄像头扫描二维码，之后将二维码文本写进文本框中(获取二维码后10位文字)。"></a>页面上显示文本框，点击文本框会打开摄像头扫描二维码，之后将二维码文本写进文本框中(获取二维码后10位文字)。</h6><h6 id="（二维码是-Abc1234567890）"><a href="#（二维码是-Abc1234567890）" class="headerlink" title="（二维码是 Abc1234567890）"></a>（二维码是 Abc1234567890）</h6><p><img src="/./images/Fiori/4_1.gif" alt="4_1"></p>
+<h6 id="XML："><a href="#XML：" class="headerlink" title="XML："></a>XML：</h6><div class="custom-code-block">
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mvc:View</span> <span class="attr">controllerName</span>=<span class="string">&quot;project2.controller.FirstView&quot;</span> <span class="attr">xmlns:l</span>=<span class="string">&quot;sap.ui.layout&quot;</span> <span class="attr">xmlns:core</span>=<span class="string">&quot;sap.ui.core&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:mvc</span>=<span class="string">&quot;sap.ui.core.mvc&quot;</span> <span class="attr">xmlns</span>=<span class="string">&quot;sap.m&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Page</span> <span class="attr">id</span>=<span class="string">&quot;popage&quot;</span> <span class="attr">title</span>=<span class="string">&quot;&#123;i18n&gt;FirstViewTitle&#125;&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">content</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">VBox</span> <span class="attr">id</span>=<span class="string">&#x27;vbox&#x27;</span> <span class="attr">class</span>=<span class="string">&quot;sapUiSmallMargin&quot;</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">Text</span>  <span class="attr">id</span>=<span class="string">&quot;txtscan&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>  <span class="attr">text</span>=<span class="string">&quot;&#123;i18n&gt;txtscan&#125;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;sapUiSmallMarginBegin boldInpTxt&quot;</span> /&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">Input</span> <span class="attr">id</span>=<span class="string">&quot;inputscan&quot;</span> <span class="attr">width</span>=<span class="string">&quot;30%&quot;</span> <span class="attr">editable</span>=<span class="string">&quot;true&quot;</span> <span class="attr">class</span>=<span class="string">&quot;sapUiSmallMarginBegin boldInpTxt&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">VBox</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">content</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Page</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mvc:View</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="Controller："><a href="#Controller：" class="headerlink" title="Controller："></a>Controller：</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">sap.<span class="property">ui</span>.<span class="title function_">define</span>([</span><br><span class="line">        <span class="string">&quot;sap/ui/core/mvc/Controller&quot;</span>,</span><br><span class="line">        <span class="string">&quot;sap/ndc/BarcodeScanner&quot;</span></span><br><span class="line">    ], <span class="keyword">function</span> (<span class="params">Controller, BarcodeScanner</span>) &#123;</span><br><span class="line">        <span class="string">&quot;use strict&quot;</span>;</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">Controller</span>.<span class="title function_">extend</span>(<span class="string">&quot;project2.controller.FirstView&quot;</span>, &#123;</span><br><span class="line">            <span class="comment">/**</span></span><br><span class="line"><span class="comment">             * Called when the worklist controller is instantiated.</span></span><br><span class="line"><span class="comment">             * <span class="doctag">@public</span></span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            <span class="attr">onInit</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> oInput  = <span class="variable language_">this</span>.<span class="title function_">getView</span>().<span class="title function_">byId</span>(<span class="string">&quot;inputscan&quot;</span>);</span><br><span class="line">                </span><br><span class="line">                oInput.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">                    <span class="keyword">if</span>(oInput.<span class="title function_">getValue</span>() == <span class="string">&quot;&quot;</span>)&#123;</span><br><span class="line">                      <span class="variable language_">this</span>.<span class="title function_">onBarcodeScan</span>();</span><br><span class="line">                    &#125;;</span><br><span class="line"> </span><br><span class="line">                 &#125;.<span class="title function_">bind</span>(<span class="variable language_">this</span>);</span><br><span class="line">            &#125;,</span><br><span class="line"> </span><br><span class="line">            <span class="attr">onBarcodeScan</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"> </span><br><span class="line">                <span class="title class_">BarcodeScanner</span>.<span class="title function_">scan</span>(</span><br><span class="line">                    <span class="keyword">function</span> (<span class="params">mResult</span>) &#123;</span><br><span class="line">                        <span class="keyword">let</span> prodOrderVal = mResult.<span class="property">text</span>;</span><br><span class="line">                        <span class="keyword">if</span>(!mResult.<span class="property">cancelled</span> &amp;&amp; prodOrderVal)&#123;</span><br><span class="line">                            <span class="variable language_">this</span>.<span class="title function_">getView</span>().<span class="title function_">byId</span>(<span class="string">&quot;inputscan&quot;</span>).<span class="title function_">setValue</span>(prodOrderVal.<span class="title function_">substring</span>(prodOrderVal.<span class="property">length</span> - <span class="number">10</span>).<span class="title function_">trim</span>());</span><br><span class="line">                        &#125;</span><br><span class="line"> </span><br><span class="line">                    &#125;.<span class="title function_">bind</span>(<span class="variable language_">this</span>),</span><br><span class="line">                    <span class="keyword">function</span> (<span class="params"><span class="built_in">Error</span></span>) &#123;</span><br><span class="line">                        <span class="keyword">let</span> msg = <span class="string">&quot;Scanning failed: &quot;</span> + <span class="title class_">Error</span>;</span><br><span class="line">                        sap.<span class="property">m</span>.<span class="property">MessageBox</span>.<span class="title function_">show</span>(msg, &#123;</span><br><span class="line">                            <span class="attr">icon</span>: sap.<span class="property">m</span>.<span class="property">MessageBox</span>.<span class="property">Icon</span>.<span class="property">ERROR</span>,</span><br><span class="line">                            <span class="attr">title</span>: <span class="string">&quot;Error&quot;</span>,</span><br><span class="line">                            <span class="attr">actions</span>: [sap.<span class="property">m</span>.<span class="property">MessageBox</span>.<span class="property">Action</span>.<span class="property">YES</span>],</span><br><span class="line">                            <span class="attr">onClose</span>: <span class="keyword">function</span> (<span class="params">oAction</span>) &#123; </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">                            &#125;.<span class="title function_">bind</span>(<span class="variable language_">this</span>)</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                );</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">        &#125;);</span><br><span class="line">    </span><br><span class="line">    &#125;);</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+</div> 
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<!-- <div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div> -->
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/categories/FIORI/4.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/categories/FIORI/4.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

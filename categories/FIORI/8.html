@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    This is zhanglulu
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="zll-abap" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">zll-abap</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+				<ul class="submenu">
+					
+					<li>
+						<!-- <a href="/ABAP">ABAP</a> -->
+						<a href="/categories/ABAP">ABAP</a>
+						
+					</li>
+					
+					<li>
+						<!-- <a href="/ODATA">ODATA</a> -->
+						<a href="/categories/ODATA">ODATA</a>
+						
+					</li>
+					
+					<li>
+						<!-- <a href="/FIORI">FIORI</a> -->
+						<a href="/categories/FIORI">FIORI</a>
+						
+					</li>
+					
+				</ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        <!--  -->
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 8rem;background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <h2 style="padding: 0rem 1rem 1rem 1rem ;">SAP Fiori实现5:如何创建一个简单的SmartFilter/SmartTable</h2>
+                <h3 style="padding: 0rem 0rem 0rem 80% ;">
+                  2024-08-30</h3>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 1rem;">
+                <link rel="stylesheet" href="/css/style.css">
+
+<h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><h6 id="SmartFilter-SmartTable是fiori中比较常见，用来显示订单信息的方式。"><a href="#SmartFilter-SmartTable是fiori中比较常见，用来显示订单信息的方式。" class="headerlink" title="SmartFilter&#x2F;SmartTable是fiori中比较常见，用来显示订单信息的方式。"></a>SmartFilter&#x2F;SmartTable是fiori中比较常见，用来显示订单信息的方式。</h6><h6 id="重要：对于SmartFilter-SmartTable中，Odata的数据来源，建议是用CDSView来创建。因为直接在SEGW中逐步创建的方式，在SmartFilter-SmartTable中是不会带检索帮助，并且日期会自动带时间（东八区：8am-后面我会出一期如何将时间去掉）。而通过CDSView注解的方式却很容易实现。"><a href="#重要：对于SmartFilter-SmartTable中，Odata的数据来源，建议是用CDSView来创建。因为直接在SEGW中逐步创建的方式，在SmartFilter-SmartTable中是不会带检索帮助，并且日期会自动带时间（东八区：8am-后面我会出一期如何将时间去掉）。而通过CDSView注解的方式却很容易实现。" class="headerlink" title="重要：对于SmartFilter&#x2F;SmartTable中，Odata的数据来源，建议是用CDSView来创建。因为直接在SEGW中逐步创建的方式，在SmartFilter&#x2F;SmartTable中是不会带检索帮助，并且日期会自动带时间（东八区：8am,后面我会出一期如何将时间去掉）。而通过CDSView注解的方式却很容易实现。"></a>重要：对于SmartFilter&#x2F;SmartTable中，Odata的数据来源，建议是用CDSView来创建。因为直接在SEGW中逐步创建的方式，在SmartFilter&#x2F;SmartTable中是不会带检索帮助，并且日期会自动带时间（东八区：8am,后面我会出一期如何将时间去掉）。而通过CDSView注解的方式却很容易实现。</h6><h6 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h6><p><img src="/./images/Fiori/8_1.png" alt="8_1"><br><img src="/./images/Fiori/8_2.png" alt="8_2"></p>
+<h6 id="XML"><a href="#XML" class="headerlink" title="XML:"></a>XML:</h6><div class="custom-code-block">
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mvc:View</span> <span class="attr">xmlns:mvc</span>=<span class="string">&quot;sap.ui.core.mvc&quot;</span> <span class="attr">xmlns</span>=<span class="string">&quot;sap.m&quot;</span> <span class="attr">xmlns:core</span>=<span class="string">&quot;sap.ui.core&quot;</span> <span class="attr">xmlns:l</span>=<span class="string">&quot;sap.ui.layout&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:smartFilterBar</span>=<span class="string">&quot;sap.ui.comp.smartfilterbar&quot;</span> <span class="attr">xmlns:smartTable</span>=<span class="string">&quot;sap.ui.comp.smarttable&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:customData</span>=<span class="string">&quot;http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1&quot;</span> <span class="attr">xmlns:table</span>=<span class="string">&quot;sap.ui.table&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">controllerName</span>=<span class="string">&quot;project2.controller.DetailView&quot;</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">    <span class="tag">&lt;<span class="name">Page</span> <span class="attr">id</span>=<span class="string">&quot;idSOSemPage&quot;</span> <span class="attr">showFooter</span>=<span class="string">&quot;true&quot;</span> <span class="attr">enableScrolling</span>=<span class="string">&quot;true&quot;</span> <span class="attr">showHeader</span>=<span class="string">&quot;true&quot;</span> <span class="attr">class</span>=<span class="string">&quot;sapUiSizeCompact&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">content</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">smartFilterBar:SmartFilterBar</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">visible</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">id</span>=<span class="string">&quot;idSOSmtFilter&quot;</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">entitySet</span>=<span class="string">&quot;ZCDS_MM_QI_LIST&quot;</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">persistencyKey</span>=<span class="string">&quot;SOSmartFilter&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">enableBasicSearch</span>=<span class="string">&quot;false&quot;</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">useDateRangeType</span>=<span class="string">&quot;true&quot;</span>      </span></span><br><span class="line"><span class="tag">                <span class="attr">initialise</span>=<span class="string">&quot;onFilterBarInitialized&quot;</span>     </span></span><br><span class="line"><span class="tag">                <span class="attr">customData:dateFormatSettings</span>=<span class="string">&#x27;\&#123;&quot;UTC&quot;:true\&#125;&#x27;</span> &gt;</span></span><br><span class="line">            </span><br><span class="line">                <span class="tag">&lt;<span class="name">smartFilterBar:controlConfiguration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">smartFilterBar:ControlConfiguration</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">id</span>=<span class="string">&quot;idWerks&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">key</span>=<span class="string">&quot;werks&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">index</span>=<span class="string">&quot;0&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">historyEnabled</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">mandatory</span>=<span class="string">&quot;mandatory&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">filterType</span>=<span class="string">&quot;single&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">visible</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">visibleInAdvancedArea</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">preventInitialDataFetchInValueHelpDialog</span>=<span class="string">&quot;true&quot;</span> &gt;</span></span><br><span class="line">                    &lt;/smartFilterBar:ControlConfiguration &gt;</span><br><span class="line">                <span class="tag">&lt;/<span class="name">smartFilterBar:controlConfiguration</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">                <span class="tag">&lt;<span class="name">smartFilterBar:controlConfiguration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">smartFilterBar:ControlConfiguration</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">id</span>=<span class="string">&quot;idEbeln&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">key</span>=<span class="string">&quot;ebeln&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">index</span>=<span class="string">&quot;1&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">historyEnabled</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">filterType</span>=<span class="string">&quot;single&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">visible</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">visibleInAdvancedArea</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">preventInitialDataFetchInValueHelpDialog</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">smartFilterBar:controlConfiguration</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">                <span class="tag">&lt;<span class="name">smartFilterBar:controlConfiguration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">smartFilterBar:ControlConfiguration</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">id</span>=<span class="string">&quot;idLifnr&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">key</span>=<span class="string">&quot;lifnr&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">index</span>=<span class="string">&quot;2&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">historyEnabled</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">filterType</span>=<span class="string">&quot;single&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">visible</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">visibleInAdvancedArea</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">preventInitialDataFetchInValueHelpDialog</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">smartFilterBar:controlConfiguration</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">                <span class="tag">&lt;<span class="name">smartFilterBar:controlConfiguration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">smartFilterBar:ControlConfiguration</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">id</span>=<span class="string">&quot;idMatnr&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">key</span>=<span class="string">&quot;matnr&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">index</span>=<span class="string">&quot;3&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">historyEnabled</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">filterType</span>=<span class="string">&quot;single&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">visible</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">visibleInAdvancedArea</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">preventInitialDataFetchInValueHelpDialog</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">smartFilterBar:controlConfiguration</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">                <span class="tag">&lt;<span class="name">smartFilterBar:controlConfiguration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">smartFilterBar:ControlConfiguration</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">id</span>=<span class="string">&quot;idLgort&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">key</span>=<span class="string">&quot;lgort&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">index</span>=<span class="string">&quot;4&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">historyEnabled</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">filterType</span>=<span class="string">&quot;single&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">visible</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">visibleInAdvancedArea</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">preventInitialDataFetchInValueHelpDialog</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">smartFilterBar:controlConfiguration</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">                <span class="tag">&lt;<span class="name">smartFilterBar:controlConfiguration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">smartFilterBar:ControlConfiguration</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">id</span>=<span class="string">&quot;idBudat&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">key</span>=<span class="string">&quot;budat&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">index</span>=<span class="string">&quot;5&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">historyEnabled</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">mandatory</span>=<span class="string">&quot;mandatory&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">filterType</span>=<span class="string">&quot;interval&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">controlType</span>=<span class="string">&quot;date&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">visible</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">					    <span class="attr">visibleInAdvancedArea</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">preventInitialDataFetchInValueHelpDialog</span>=<span class="string">&quot;true&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">smartFilterBar:controlConfiguration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">smartFilterBar:SmartFilterBar</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">            <span class="tag">&lt;<span class="name">smartTable:SmartTable</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">id</span>=<span class="string">&quot;idSOSmtTbl&quot;</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">smartFilterId</span>=<span class="string">&quot;idSOSmtFilter&quot;</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">tableType</span>=<span class="string">&quot;Table&quot;</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">editable</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">entitySet</span>=<span class="string">&quot;ZCDS_MM_QI_LIST&quot;</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">enableAutoBinding</span>=<span class="string">&quot;false&quot;</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">enableAutoColumnWidth</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">useTablePersonalisation</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">useVariantManagement</span>=<span class="string">&quot;true&quot;</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">showTablePersonalisation</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">customData:dateFormatSettings</span>=<span class="string">&#x27;\&#123;&quot;UTC&quot;:true\&#125;&#x27;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">enableExport</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">showFullScreenButton</span>=<span class="string">&quot;true&quot;</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">showRowCount</span>=<span class="string">&quot;true&quot;</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">persistencyKey</span>=<span class="string">&quot;SOSmartTable&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">class</span>=<span class="string">&quot;sapUiLargeMarginEnd&quot;</span> </span></span><br><span class="line"><span class="tag">                <span class="attr">ignoredFields</span>=<span class="string">&quot;meins&quot;</span>            </span></span><br><span class="line"><span class="tag">                <span class="attr">initiallyVisibleFields</span>=<span class="string">&quot;zie_qi_class,budat,aufnr,ebeln,matnr,maktx,werks,werks_name,lgort,lifnr,lifnr_name,emlif,emlif_name,menge,cinsm,zie_dlv_stn_plt,zeivr,zie_materialqualityja_prd,zie_processja_prd,zie_mat_spec_ja_prd,mblnr,mjahr,zeile,charg&quot;</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">                <span class="tag">&lt;<span class="name">table:Table</span> </span></span><br><span class="line"><span class="tag">                    <span class="attr">id</span>=<span class="string">&quot;idSOTable&quot;</span> </span></span><br><span class="line"><span class="tag">                    <span class="attr">selectionMode</span>=<span class="string">&quot;Single&quot;</span> </span></span><br><span class="line"><span class="tag">                    <span class="attr">selectionBehavior</span>=<span class="string">&quot;Row&quot;</span> </span></span><br><span class="line"><span class="tag">                    <span class="attr">visibleRowCount</span>=<span class="string">&quot;15&quot;</span>     </span></span><br><span class="line"><span class="tag">                    <span class="attr">rowSelectionChange</span>=<span class="string">&quot;onRowSelectionChange&quot;</span> </span></span><br><span class="line"><span class="tag">                    <span class="attr">class</span>=<span class="string">&quot;sapUiLargeMarginEnd&quot;</span> &gt;</span></span><br><span class="line">                </span><br><span class="line">                <span class="tag">&lt;/<span class="name">table:Table</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">smartTable:layoutData</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">FlexItemData</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">id</span>=<span class="string">&quot;idFlexTable&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">growFactor</span>=<span class="string">&quot;1&quot;</span> </span></span><br><span class="line"><span class="tag">                        <span class="attr">baseSize</span>=<span class="string">&quot;0%&quot;</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">smartTable:layoutData</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">smartTable:customData</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">core:CustomData</span> </span></span><br><span class="line"><span class="tag">                            <span class="attr">key</span>=<span class="string">&quot;dateFormatSettings&quot;</span> </span></span><br><span class="line"><span class="tag">                            <span class="attr">value</span>=<span class="string">&#x27;\&#123;&quot;UTC&quot;:true\&#125;&#x27;</span> /&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">smartTable:customData</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">smartTable:SmartTable</span>&gt;</span></span><br><span class="line">            </span><br><span class="line">        <span class="tag">&lt;/<span class="name">content</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">OverflowToolbar</span> <span class="attr">id</span>=<span class="string">&quot;ovft&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">ToolbarSpacer</span> <span class="attr">id</span>=<span class="string">&quot;tbsp&quot;</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Button</span> <span class="attr">id</span>=<span class="string">&quot;back&quot;</span> <span class="attr">text</span>=<span class="string">&quot;&#123;i18n&gt;back&#125;&quot;</span> <span class="attr">press</span>=<span class="string">&quot;onBackScreen&quot;</span> <span class="attr">type</span>=<span class="string">&quot;Emphasized&quot;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">OverflowToolbar</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Page</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mvc:View</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</div> 
+
+<h6 id="对于SmartFilter-SmartTable，fiori是有很高的集成，你只需要设置好SmartFilter和SmartTable中的entitySet以及其中的字段，它便可以智能的显示出来了。"><a href="#对于SmartFilter-SmartTable，fiori是有很高的集成，你只需要设置好SmartFilter和SmartTable中的entitySet以及其中的字段，它便可以智能的显示出来了。" class="headerlink" title="对于SmartFilter&#x2F;SmartTable，fiori是有很高的集成，你只需要设置好SmartFilter和SmartTable中的entitySet以及其中的字段，它便可以智能的显示出来了。"></a>对于SmartFilter&#x2F;SmartTable，fiori是有很高的集成，你只需要设置好SmartFilter和SmartTable中的entitySet以及其中的字段，它便可以智能的显示出来了。</h6><p><img src="/./images/Fiori/8_3.png" alt="8_3"><br><img src="/./images/Fiori/8_4.png" alt="8_4"></p>
+<h6 id="其中filter中我并没有设置相关检索帮助的命令，但是却可以自动显示。这归功于CDSView强大的注解功能，有机会我们再谈。"><a href="#其中filter中我并没有设置相关检索帮助的命令，但是却可以自动显示。这归功于CDSView强大的注解功能，有机会我们再谈。" class="headerlink" title="其中filter中我并没有设置相关检索帮助的命令，但是却可以自动显示。这归功于CDSView强大的注解功能，有机会我们再谈。"></a>其中filter中我并没有设置相关检索帮助的命令，但是却可以自动显示。这归功于CDSView强大的注解功能，有机会我们再谈。</h6><p><img src="/./images/Fiori/8_5.png" alt="8_5"></p>
+<h6 id="杂谈：对于SmartTilter和SmartTable仍然有很多的功能可以挖掘。比如："><a href="#杂谈：对于SmartTilter和SmartTable仍然有很多的功能可以挖掘。比如：" class="headerlink" title="杂谈：对于SmartTilter和SmartTable仍然有很多的功能可以挖掘。比如："></a>杂谈：对于SmartTilter和SmartTable仍然有很多的功能可以挖掘。比如：</h6><h6 id="如何控制Smartfiler的默认参数（比如跳转）"><a href="#如何控制Smartfiler的默认参数（比如跳转）" class="headerlink" title="如何控制Smartfiler的默认参数（比如跳转）"></a>如何控制Smartfiler的默认参数（比如跳转）</h6><h6 id="跳转至Smartfiler页面-如果自动刷新SmartTable，而不用每次手动点击-‘GO’"><a href="#跳转至Smartfiler页面-如果自动刷新SmartTable，而不用每次手动点击-‘GO’" class="headerlink" title="跳转至Smartfiler页面 如果自动刷新SmartTable，而不用每次手动点击 ‘GO’"></a>跳转至Smartfiler页面 如果自动刷新SmartTable，而不用每次手动点击 ‘GO’</h6><h6 id="点击SmartTable中的一行-如何对于单行进行跳转"><a href="#点击SmartTable中的一行-如何对于单行进行跳转" class="headerlink" title="点击SmartTable中的一行 如何对于单行进行跳转"></a>点击SmartTable中的一行 如何对于单行进行跳转</h6><h6 id="跳转返回，如何将之前的数据更新等"><a href="#跳转返回，如何将之前的数据更新等" class="headerlink" title="跳转返回，如何将之前的数据更新等"></a>跳转返回，如何将之前的数据更新等</h6><h6 id="后期我们再聊！谢谢"><a href="#后期我们再聊！谢谢" class="headerlink" title="后期我们再聊！谢谢"></a>后期我们再聊！谢谢</h6>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<!-- <div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div> -->
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/categories/FIORI/8.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/categories/FIORI/8.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
